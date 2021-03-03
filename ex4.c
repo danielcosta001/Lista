@@ -10,19 +10,19 @@ void printArray(int vetor[], int tamanho)
     printf("\n"); 
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
     printf("digite o tamanha do vetor\n");
     int tamanho, *p, i;
     scanf("%d",&tamanho);
-    p = (int *) malloc(tamanho*sizeof(int));
+    p = (int *) malloc(sizeof(tamanho));
 
     for(i = 0; i < tamanho; i++){
         p[i] = p++;
     }
     printArray(&p,tamanho);
-    
-    
-    //free(*p);
+    free(*p);
+
+
     return 0;
 }
